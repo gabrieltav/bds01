@@ -14,14 +14,14 @@ import com.devsuperior.bds01.services.DepartmentService;
 @RestController
 @RequestMapping(value = "/departments")
 public class DepartmentController {
-		
-		@Autowired
-		private DepartmentService service;
-		
-		@GetMapping
-		public ResponseEntity<List<DepartmentDTO>> findAll() {
-			List<DepartmentDTO> list = service.findAll();
-			return ResponseEntity.ok().body(list);
-		}
+
+	@Autowired
+	private DepartmentService service;
+
+	@GetMapping
+	public ResponseEntity<List<DepartmentDTO>> findAll() {
+		List<DepartmentDTO> list = service.findAll();
+		return ResponseEntity.ok().body(list);
+	}
 
 }
